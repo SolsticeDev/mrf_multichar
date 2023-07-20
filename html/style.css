@@ -1,0 +1,693 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+.container {
+    display: none;
+}
+
+.characters::-webkit-scrollbar {
+    display: none;
+} 
+
+.main-screen {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    left: 0;
+    z-index: 100;
+
+}
+
+.characters-block-header>p {
+    text-align: center;
+    color: #ededed;
+    line-height: 24px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.characters-list {
+    display: none;
+    width: 22%;
+    height: 70%;
+    margin-left: -13%;
+    top: 90%;
+    border-radius: .8vh;
+    padding: 290px;
+}
+
+.character-list-header {
+    position: relative;
+    top: 2.5vh;
+    width: 100%;
+    height: 10%;
+    margin-left: -2vh;
+
+}
+
+.character-list-header>p {
+    text-align: center;
+    font-size: 2vh;
+    margin-top: .1vh;
+    font-family: 'Rubik', sans-serif;
+    letter-spacing: .1vh;
+    font-weight: 400;
+    color: #ededed;
+}
+
+.character-list-header>p2 {
+    text-align: center;
+    font-size: 2vh;
+    margin-top: .1vh;
+    font-family: 'Rubik', sans-serif;
+    letter-spacing: .1vh;
+    font-weight: 400;
+    color: #ff0000;
+}
+
+.characters {
+    width: 100%;
+    height: 75%;
+    overflow: scroll !important;
+}
+
+.character {
+    position: relative;
+    width: 94%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url('https://media.discordapp.net/attachments/1003822642379374703/1131520439701737522/marfychar.png');
+    height: 75px;
+    margin-top: 15px;
+    font-family: 'Rubik', sans-serif;
+    border-bottom: 4px solid #74aa3200;
+    transition: .1s linear;
+    border-radius: .3vh;
+    cursor: pointer;
+}
+
+.character:hover {
+   /* background-color: #00000059; */
+}
+
+.character>span {
+    color: #ededed;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: .1vh;
+    font-family: 'Rubik', sans-serif;
+}
+
+#cid {
+    color: #00ffbf;
+    position: relative;
+    float: right;
+    font-size: 1.5vh;
+    right: 35px;
+    line-height: 80px;
+}
+
+.char-selected {
+    /* background-color: rgb(0 0 0 / 29%) !important; */
+    transition: 250ms;
+}
+
+.disabled {
+    /* background-color: rgba(0, 0, 0, 0.691); */
+}
+
+.logo {
+position: absolute;
+width: 380px;
+height: 228px;
+left: 1496px;
+top: 65px;
+/* background: url(""); */
+}
+
+#slot-name {
+    position: relative;
+    color: #ededed;
+    font-size: 17px;
+    line-height: 80px;
+    left: 20px;
+    font-weight:500;
+    font-family: 'Rubik', sans-serif;
+}
+
+.character-btn {
+   position: absolute;
+    width: 80%;
+    height: 5.0vh;
+    top: 85%;
+    transition: 0.2s;
+    float: left;
+    margin-top: 15px;
+    margin-right: 50px;
+    cursor: pointer;
+    overflow: visible !important;
+}
+
+.character-btn>p {
+    color: #ededed;
+    letter-spacing: .1vh;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    font-size: 2vh;
+    text-transform: uppercase;
+    line-height: 5vh;
+    font-weight: bold;
+}
+
+.shadow {
+    position: absolute;
+    width: 245px;
+    height: 940px;
+    left: -117px;
+    top: 16px;
+    background: #0edda9;
+    filter: blur(310px);
+}
+
+#play {
+    display: none;
+    border-radius: .3vh; 
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url('https://media.discordapp.net/attachments/1003822642379374703/1128354940872560830/play.png');
+    margin-top:-4vh;
+    margin-left:2vh;
+    height: 14vh;
+    width: 39vh;
+    z-index:1;
+    z-index:2;
+    z-index:999;
+    transition: all 0.2s ease;
+}
+
+#play:hover {
+
+}
+
+#delete {
+    display: none;
+    border-radius: .3vh; 
+    position: absolute;
+    height: 14vh;
+    width: 39vh;
+    margin-top:-14vh;
+    margin-left:2vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url('https://media.discordapp.net/attachments/1003822642379374703/1128354701067419689/del.png');
+    z-index:1;
+    z-index:2;
+    z-index:999;
+    transition: all 0.2s ease;
+}
+
+#delete:hover {
+
+}
+
+.character-info {
+    display: none;
+    position: absolute;
+    width: 20%;
+    height: 30%;
+    right: -2%;
+    top: -40%;
+
+    border-radius: .8vh;
+    padding: 30px;
+    overflow: visible !important;
+}
+
+#char-info-icon {
+    position: relative;
+    font-size: 1.5vh;
+    color: #ededed;
+    right: 20px;
+    overflow: visible !important;
+}
+
+#char-info-titel {
+    text-transform: uppercase;
+    position: absolute;
+    font-size: 2vh;
+    color: #ededed;
+    left: -5vh;
+    letter-spacing: .1vh;
+    font-weight: 900;
+    overflow: visible !important;
+}
+
+#no-char {
+    position: absolute;
+    color: #ededed;
+    font-size: 16px;
+    top: 30%;
+    text-align: center;
+}
+
+.char-info-titel {
+    position: relative;
+    left: 28%;
+    top: 3%;
+    overflow: visible !important;
+}
+
+.character-info-valid {
+    position: relative;
+    top: 5%;
+    overflow: visible !important;
+}
+
+#info-label {
+   color: #4dd3b6;
+   line-height: 60px;
+   text-shadow: 0px 0px 13.92px #4dd3b6;
+}
+
+.char-info-js {
+    line-height: 60px;
+}
+
+.character-info-box {
+    position: relative;
+    color: #ededed;
+    overflow: hidden;
+    font-size: 1.5vh;
+    width: 96%;
+    height: 6.0vh;
+    font-weight: 700;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url('https://media.discordapp.net/attachments/1003822642379374703/1131520603040522301/marfyinfo.png');
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.char-info-js {
+    position: absolute;
+    left: 35%;
+}
+
+#info-label {
+    margin-left: 10px;
+}
+
+.character-delete {
+    display: none;
+    width: 33vh;
+    height: 12vh;
+    top: 3vh;
+    left: 130vh;
+    right: 0;
+    position:absolute;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #00000075;
+    border-radius: .8vh;
+    padding: 30px;
+    font-family: 'Rubik', sans-serif;
+    box-shadow: 0 4px 8px 0 rgba(10, 233, 196, 0.788), 0 6px 20px 0 rgba(10, 233, 196, 0.788);
+    color: #ededed;
+    font-family: 'Rubik', sans-serif;
+    overflow: visible !important;
+}
+
+.characters-delete-block-header {
+    position: absolute;
+    width: 100%;
+    height: 11%;
+    color: #ededed;
+    text-align: left;
+    font-size: 2vh;
+    line-height: 29px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    overflow: visible !important;
+}
+
+.characters-delete-block-header>p {
+    font-family: 'Rubik', sans-serif;
+    overflow: visible !important;
+}
+
+.character-delete>p {
+    padding-top: 50px;
+    font-size: 1.3vh;
+    overflow: visible !important;
+}
+
+.error {
+    display: none;
+    position: relative;
+    width: 40vh;
+    height: auto;
+    top: 5vh;
+    left: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(23, 23, 23, 1);
+    border: 2px solid #dc1414;
+    border-radius: .8vh;
+    padding: 30px;
+    font-family: 'Rubik', sans-serif;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: #ededed;
+    font-family: 'Rubik', sans-serif;
+    overflow: visible !important;
+}
+
+.error-title{
+    position: relative;
+    width: 100%;
+    height: 11%;
+    margin-bottom: 16px;
+    color: #ededed;
+    text-align: left;
+    font-size: 18px;
+    line-height: 29px;
+    vertical-align: middle;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    overflow: visible !important;
+}
+.error-title > .material-symbols-outlined{
+    line-height: 27px;
+    vertical-align: bottom;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 16px;
+}
+
+.error-msg {
+    font-family: 'Rubik', sans-serif;
+    overflow: visible !important;
+    padding: 8px;
+}
+
+#yeet {
+    overflow: visible !important;
+}
+
+.character-acceptdel-btn {
+    position: absolute;
+    width: 43%;
+    height: 19%;
+    bottom: 0;
+    left: 5%;
+    margin-bottom: 20px;
+    background-color: #0dffb6a6;
+    border-radius: 4px;
+    transition: 0.2s;
+    overflow: visible !important;
+    cursor: pointer;
+}
+
+.character-canceldel-btn {
+    position: absolute;
+    width: 43%;
+    height: 19%;
+    bottom: 0;
+    right: 5%;
+    margin-bottom: 20px;
+    background-color: #dc1414;
+    border-radius: 4px;
+    transition: 0.2s;
+    overflow: visible !important;
+    cursor: pointer;
+}
+
+.close-err-btn {
+    font-weight: 900;
+    text-transform: uppercase;
+    width: auto;
+    height: auto;
+    padding: 8px 24px;
+    margin-top: 24px;
+    background-color: #dc1414;
+    border-radius: 4px;
+    transition: 0.2s;
+    overflow: visible !important;
+    cursor: pointer;
+}
+
+.character-acceptdel-btn>p {
+    color: #ededed;
+    text-align: center;
+    padding-top: 1vh;
+    font-family: 'Rubik', sans-serif;
+    overflow: visible !important;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.character-canceldel-btn>p {
+    color: #ededed;
+    text-align: center;
+    padding-top: 1vh;
+    font-family: 'Rubik', sans-serif;
+    overflow: visible !important;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.character-register {
+    display: none;
+    position: fixed;
+    width: 20%;
+    height: 50%;
+    top: 5%;
+    margin-left: auto;
+    left: 75vh;
+    background: rgba(5, 26, 21, 0.73);
+    border-radius: 16px;
+    border-radius: .8vh;
+    padding: 30px;
+    font-family: 'Rubik', sans-serif;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#close-reg {
+    position: relative;
+    top: -2vh;
+    float: right;
+    font-size: 1.5vh;
+    right: 6vh;
+    cursor: pointer;
+}
+
+.material-symbols-outlined {
+    color: #ededed;
+    background: rgba(89, 89, 89, 0.9);
+    font-weight: 900;
+    border-radius: .3vh;
+    padding: 1.10vh;
+}
+
+.characters-register-block-header {
+    text-transform: uppercase;
+    position: absolute;
+    width: 100%;
+    height: 12vh;
+    color: #ededed;
+    text-align: left;
+    font-size: 2vh;
+    font-weight: 900;
+}
+
+.char-register-inputs {
+    position: absolute;
+    top: 12%;
+     left: 20%;
+    overflow: visible !important;
+}
+
+.char-reg-input {
+    position: relative;
+    float: left;
+    margin-top: 1.3vh;
+    border: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url('https://media.discordapp.net/attachments/1003822642379374703/1131520756350734358/marfyinput.png');
+    background-color:transparent;
+    outline: none;
+    width: 72%;
+    height: 6vh;
+    color: #ededed;
+    max-width: 100%;
+    font-weight: 900;
+    padding: 4px;
+    border-radius: .3vh;
+    font-family: 'Rubik', sans-serif;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    cursor: text;
+}
+
+select {
+    position: absolute;
+    border: none;
+    border: .3vh solid #444444;
+    background-color: #171717;
+    outline: none;
+    width: 74.5%;
+    height: 4vh;
+    top: 33.9vh;
+    left: .1vh;
+    color: #ededed;
+    max-width: 100%;
+    padding: 4px;
+    border-radius: .3vh;
+    font-family: 'Rubik', sans-serif;
+    text-align-last: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+select:hover {
+    background-color: rgb(2 5 6 / 81%);
+}
+
+select:focus {
+    background-color: rgba(9, 56, 50, 0.81);
+}
+
+#gender option {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+select::placeholder {
+    text-align: center;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+.char-reg-input::placeholder {
+    color: rgba(255, 255, 255, 0.52);
+}
+
+input[type="date"] {
+    color: #ededed;
+    text-align: center;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+input[type=date]::-webkit-inner-spin-button,
+input[type=date]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="date"]::-webkit-input-placeholder {
+    visibility: hidden !important;
+}
+
+input[type="date"]::-webkit-clear-button {
+    display: none;
+}
+
+#birthdate {
+    color: #ededed;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+}
+
+.character-reg-btn {
+    position: absolute;
+    max-width: 87%;
+    height: 4vh;
+    background-color: #dc1414;
+    border-radius: .3vh;
+    bottom: 3vh;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.character-reg-btn>p {
+    text-align: center;
+    line-height: 4vh;
+    color: #ededed;
+    text-transform: uppercase;
+    font-family: 'Rubik', sans-serif;
+    font-size: 2vh;
+    font-weight: 900;
+}
+
+.loading-rondje {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    transform: translateY(-50%);
+    text-align: center;
+    padding: 1vh;
+}
+
+.loading-rondje > p {
+    color: white;
+    margin-top: 1vh;
+    font-family: 'Rubik', sans-serif;
+    text-shadow: 1px 1px 0px #00000085;
+}
+
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    border: 8px solid #00ffc8;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #00ffc8 transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
