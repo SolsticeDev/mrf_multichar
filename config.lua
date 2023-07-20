@@ -4,9 +4,10 @@ Config.StartingApartment = false -- Turn off apartment spawn
 Config.DefaultSpawn = vector3(-1035.71, -2731.87, 12.86) -- Default spawn coords if you disabled apartment
 
 Config.Interior = vector3(-1330.97, 144.38, -99.19) -- Interior to load where characters are previewed
-Config.PedCoords = vector4(-1325.89, 144.15, -99.19, 87.58) -- Create preview ped at these coordinates
+Config.PedCoords = vector4(-1324.92, 143.79, -99.19, 84.89) -- Create preview ped at these coordinates
 Config.HiddenCoords = vector4(-1344.55, 137.38, -99.19, 310.1) -- Hides your actual ped while you are in selection
-Config.CamCoords = vector4(-1328.83, 144.19, -99.19, 269.72) -- Camera coordinates for character preview screen
+Config.CamCoords = vector4(-1328.57, 143.77, -99.19, 271.41) -- Camera coordinates for character preview screen
+Config.Car = vector4(-1323.73, 143.87, -99.7, 23.22) -- Car spawn only use this in a loacked interior
 Config.EnableDeleteButton = true -- Define if the player can delete the character or not
 
 Config.DefaultNumberOfCharacters = 5 -- Define maximum amount of default characters (maximum 5 characters defined by default)

@@ -1,7 +1,7 @@
 ## mrf_multichar
 * Redesign qb-multicharacter.
 * Inspired from debux-multicharacter.
-* ![multichar](https://media.discordapp.net/attachments/1003822642379374703/1128727787793039422/multichar.png)
+* ![multichar](https://media.discordapp.net/attachments/1003822642379374703/1131542859380695040/multi.png)
 
 ## Dependencies
 - [qb-core](https://github.com/qbcore-framework/qb-core)

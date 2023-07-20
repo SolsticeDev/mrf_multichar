@@ -51,6 +51,30 @@ local function openCharMenu(bool)
     end)
 end
 
+-- Car
+
+CreateThread(function()
+    local model = 'xa21'
+    RequestModel(model)
+    while not HasModelLoaded(model) do
+        Wait(0)
+    end
+    local vehicle = CreateVehicle(model, Config.Car.x, Config.Car.y, Config.Car.z, Config.Car.h, false, false)
+	local timeout = 0
+    local vehColour = GetVehicleColours(vehicle)
+	SetEntityAsMissionEntity(vehicle, true, false)
+	SetVehicleHasBeenOwnedByPlayer(vehicle, true)
+	SetVehicleNeedsToBeHotwired(vehicle, false)
+	SetVehRadioStation(vehicle, 'OFF')
+    SetVehicleEngineOn(vehicle, true, true)
+    SetVehicleColours(vehicle, 27, vehColour)
+	RequestCollisionAtCoord(Config.Car.x, Config.Car.y, Config.Car.z, Config.Car.h)
+	while not HasCollisionLoadedAroundEntity(vehicle) and timeout < 2000 do
+		Wait(0)
+		timeout = timeout + 1
+	end
+end)
+
 -- Events
 
 RegisterNetEvent('mrf_multichar:client:closeNUIdefault', function() -- This event is only for no starting apartments
@@ -130,8 +154,7 @@ RegisterNUICallback('cDataPed', function(nData, cb)
                     end
                     charPed = CreatePed(2, model, Config.PedCoords.x, Config.PedCoords.y, Config.PedCoords.z - 0.98, Config.PedCoords.w, false, true)
                     local RandomAnims = {
-                        "WORLD_HUMAN_SMOKING_POT",
-                        "WORLD_HUMAN_PARTYING",
+                        "WORLD_HUMAN_LEANING_CASINO_TERRACE"
                     }
                     local PlayAnim = RandomAnims[math.random(#RandomAnims)]
                     SetPedCanPlayAmbientAnims(charPed, true) 
