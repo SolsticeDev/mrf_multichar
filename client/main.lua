@@ -54,25 +54,28 @@ end
 -- Car
 
 CreateThread(function()
-    local model = 'xa21'
+    local model = Config.CarModel
     RequestModel(model)
     while not HasModelLoaded(model) do
         Wait(0)
     end
     local vehicle = CreateVehicle(model, Config.Car.x, Config.Car.y, Config.Car.z, Config.Car.h, false, false)
-	local timeout = 0
+    local timeout = 0
     local vehColour = GetVehicleColours(vehicle)
-	SetEntityAsMissionEntity(vehicle, true, false)
-	SetVehicleHasBeenOwnedByPlayer(vehicle, true)
-	SetVehicleNeedsToBeHotwired(vehicle, false)
-	SetVehRadioStation(vehicle, 'OFF')
+    SetEntityAsMissionEntity(vehicle, true, false)
+    SetVehicleHasBeenOwnedByPlayer(vehicle, true)
+    SetVehicleNeedsToBeHotwired(vehicle, false)
+    SetVehRadioStation(vehicle, 'OFF')
     SetVehicleEngineOn(vehicle, true, true)
     SetVehicleColours(vehicle, 27, vehColour)
-	RequestCollisionAtCoord(Config.Car.x, Config.Car.y, Config.Car.z, Config.Car.h)
-	while not HasCollisionLoadedAroundEntity(vehicle) and timeout < 2000 do
-		Wait(0)
-		timeout = timeout + 1
-	end
+    FreezeEntityPosition(vehicle, true)
+    SetEntityInvincible(vehicle, true)
+    SetVehicleDoorsLocked(vehicle, 3)
+    RequestCollisionAtCoord(Config.Car.x, Config.Car.y, Config.Car.z, Config.Car.h)
+    while not HasCollisionLoadedAroundEntity(vehicle) and timeout < 2000 do
+        Wait(0)
+        timeout = timeout + 1
+    end
 end)
 
 -- Events
