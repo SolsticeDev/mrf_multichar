@@ -119,7 +119,6 @@ RegisterNetEvent('mrf_multichar:server:deleteCharacter', function(citizenid)
 end)
 
 -- Callbacks
-
 QBCore.Functions.CreateCallback("mrf_multichar:server:GetUserCharacters", function(source, cb)
     local src = source
     local license = QBCore.Functions.GetIdentifier(src, 'license')
