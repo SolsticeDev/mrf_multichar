@@ -19,7 +19,6 @@
 ensure oxmysql
 ensure ox_lib
 ensure qb-core
-ensure illenium-appearance
 ensure mrf_multichar
 ```
 
