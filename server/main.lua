@@ -170,7 +170,7 @@ end)
 QBCore.Functions.CreateCallback("mrf_multichar:server:getSkin", function(_, cb, cid)
     local result = MySQL.query.await('SELECT * FROM playerskins WHERE citizenid = ? AND active = ?', {cid, 1})
     if result[1] ~= nil then
-        cb(json.decode(result[1].skin))
+        cb(result[1].model, result[1].skin)
     else
         cb(nil)
     end
