@@ -147,27 +147,22 @@ RegisterNUICallback('cDataPed', function(nData, cb)
     SetEntityAsMissionEntity(charPed, true, true)
     DeleteEntity(charPed)
     if cData ~= nil then
-        QBCore.Functions.TriggerCallback('mrf_multichar:server:getSkin', function(skinData)
-            if skinData then
-                local model = joaat(skinData.model)
+        QBCore.Functions.TriggerCallback('mrf_multichar:server:getSkin', function(model, data)
+            model = model ~= nil and tonumber(model) or false
+            if model ~= nil then
                 CreateThread(function()
                     RequestModel(model)
                     while not HasModelLoaded(model) do
                         Wait(0)
                     end
                     charPed = CreatePed(2, model, Config.PedCoords.x, Config.PedCoords.y, Config.PedCoords.z - 0.98, Config.PedCoords.w, false, true)
-                    local RandomAnims = {
-                        "WORLD_HUMAN_LEANING_CASINO_TERRACE"
-                    }
-                    local PlayAnim = RandomAnims[math.random(#RandomAnims)]
-                    SetPedCanPlayAmbientAnims(charPed, true) 
-                    TaskStartScenarioInPlace(charPed, PlayAnim, 0, true)
                     SetPedComponentVariation(charPed, 0, 0, 0, 2)
                     FreezeEntityPosition(charPed, false)
                     SetEntityInvincible(charPed, true)
                     PlaceObjectOnGroundProperly(charPed)
                     SetBlockingOfNonTemporaryEvents(charPed, true)
-                    exports['illenium-appearance']:setPedAppearance(charPed, skinData)
+                    data = json.decode(data)
+                    TriggerEvent('qb-clothing:client:loadPlayerClothing', data, charPed)
                 end)
             else
                 CreateThread(function()
