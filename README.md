@@ -6,7 +6,7 @@
 ## Dependencies
 - [qb-core](https://github.com/qbcore-framework/qb-core)
 - [ox_lib](https://github.com/overextended/ox_lib) - For the character appearance.
-- [illenium-appearance](https://github.com/iLLeniumStudios/illenium-appearance) - For the character creation and saving outfits.
+- qb-clothing - For the character creation and saving outfits.
 
 ## Installation
 ### Manual
