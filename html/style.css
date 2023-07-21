@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 .container {
     display: none;
@@ -14,58 +13,53 @@
     width: 100vw;
     left: 0;
     z-index: 100;
-
 }
 
 .characters-block-header>p {
     text-align: center;
     color: #ededed;
-    line-height: 24px;
+    line-height: 2.4vh;
     font-family: 'Rubik', sans-serif;
 }
 
 .characters-list {
     display: none;
-    width: 22%;
-    height: 70%;
-    margin-left: -13%;
-    top: 90%;
+    width: 22vw;
+    height: 70vh;
+    margin-left: -13vw;
+    top: 90vh;
     border-radius: .8vh;
-    padding: 290px;
+    padding: 29vh;
 }
 
 .character-list-header {
     position: relative;
     top: 2.5vh;
     width: 100%;
-    height: 10%;
+    height: 10vh;
     margin-left: -2vh;
-
 }
 
-.character-list-header>p {
+.character-list-header>p, .character-list-header>p2 {
     text-align: center;
     font-size: 2vh;
     margin-top: .1vh;
     font-family: 'Rubik', sans-serif;
     letter-spacing: .1vh;
     font-weight: 400;
+}
+
+.character-list-header>p {
     color: #ededed;
 }
 
 .character-list-header>p2 {
-    text-align: center;
-    font-size: 2vh;
-    margin-top: .1vh;
-    font-family: 'Rubik', sans-serif;
-    letter-spacing: .1vh;
-    font-weight: 400;
     color: #ff0000;
 }
 
 .characters {
     width: 100%;
-    height: 75%;
+    height: 75vh;
     overflow: scroll !important;
 }
 
@@ -101,8 +95,8 @@
     position: relative;
     float: right;
     font-size: 1.5vh;
-    right: 35px;
-    line-height: 80px;
+    right: 3.5vh;
+    line-height: 8vh;
 }
 
 .char-selected {
@@ -116,19 +110,19 @@
 
 .logo {
 position: absolute;
-width: 380px;
-height: 228px;
-left: 1496px;
-top: 65px;
+width: 38vw;
+height: 22.8vh;
+left: 149.6vh;
+top: 6.5vh;
 /* background: url(""); */
 }
 
 #slot-name {
     position: relative;
     color: #ededed;
-    font-size: 17px;
-    line-height: 80px;
-    left: 20px;
+    font-size: 1.7vh;
+    line-height: 8vh;
+    left: 2vh;
     font-weight:500;
     font-family: 'Rubik', sans-serif;
 }
@@ -141,7 +135,7 @@ top: 65px;
     transition: 0.2s;
     float: left;
     margin-top: 15px;
-    margin-right: 50px;
+    margin-right: 5vh;
     cursor: pointer;
     overflow: visible !important;
 }
@@ -159,12 +153,12 @@ top: 65px;
 
 .shadow {
     position: absolute;
-    width: 245px;
-    height: 940px;
-    left: -117px;
-    top: 16px;
+    width: 24.5vw;
+    height: 94vh;
+    left: -11.7vh;
+    top: 1.6vh;
     background: #0edda9;
-    filter: blur(310px);
+    filter: blur(31vh);
 }
 
 #play {
@@ -178,14 +172,8 @@ top: 65px;
     margin-left:2vh;
     height: 14vh;
     width: 39vh;
-    z-index:1;
-    z-index:2;
-    z-index:999;
+    z-index: 999;
     transition: all 0.2s ease;
-}
-
-#play:hover {
-
 }
 
 #delete {
@@ -199,26 +187,19 @@ top: 65px;
     background-repeat: no-repeat;
     background-position: center center;
     background-image: url('https://media.discordapp.net/attachments/1003822642379374703/1128354701067419689/del.png');
-    z-index:1;
-    z-index:2;
-    z-index:999;
+    z-index: 999;
     transition: all 0.2s ease;
-}
-
-#delete:hover {
-
 }
 
 .character-info {
     display: none;
     position: absolute;
     width: 20%;
-    height: 30%;
+    height: 30vh;
     right: -2%;
-    top: -40%;
-
+    top: -40vh;
     border-radius: .8vh;
-    padding: 30px;
+    padding: 3vh;
     overflow: visible !important;
 }
 
@@ -226,7 +207,7 @@ top: 65px;
     position: relative;
     font-size: 1.5vh;
     color: #ededed;
-    right: 20px;
+    right: 2vh;
     overflow: visible !important;
 }
 
@@ -244,8 +225,8 @@ top: 65px;
 #no-char {
     position: absolute;
     color: #ededed;
-    font-size: 16px;
-    top: 30%;
+    font-size: 1.6vh;
+    top: 30vh;
     text-align: center;
 }
 
@@ -264,12 +245,12 @@ top: 65px;
 
 #info-label {
    color: #4dd3b6;
-   line-height: 60px;
-   text-shadow: 0px 0px 13.92px #4dd3b6;
+   line-height: 6vh;
+   text-shadow: 0px 0px 1.392vh #4dd3b6;
 }
 
 .char-info-js {
-    line-height: 60px;
+    line-height: 6vh;
 }
 
 .character-info-box {
@@ -284,7 +265,7 @@ top: 65px;
     background-position: center center;
     background-image: url('https://media.discordapp.net/attachments/1003822642379374703/1131520603040522301/marfyinfo.png');
     text-transform: uppercase;
-    margin-bottom: 12px;
+    margin-bottom: 1.2vh;
 }
 
 .char-info-js {
@@ -293,7 +274,7 @@ top: 65px;
 }
 
 #info-label {
-    margin-left: 10px;
+    margin-left: 1vh;
 }
 
 .character-delete {
@@ -308,7 +289,7 @@ top: 65px;
     margin-right: auto;
     background-color: #00000075;
     border-radius: .8vh;
-    padding: 30px;
+    padding: 3vh;
     font-family: 'Rubik', sans-serif;
     box-shadow: 0 4px 8px 0 rgba(10, 233, 196, 0.788), 0 6px 20px 0 rgba(10, 233, 196, 0.788);
     color: #ededed;
@@ -319,11 +300,11 @@ top: 65px;
 .characters-delete-block-header {
     position: absolute;
     width: 100%;
-    height: 11%;
+    height: 11vh;
     color: #ededed;
     text-align: left;
     font-size: 2vh;
-    line-height: 29px;
+    line-height: 2.9vh;
     font-family: 'Rubik', sans-serif;
     font-weight: 900;
     text-transform: uppercase;
@@ -336,7 +317,7 @@ top: 65px;
 }
 
 .character-delete>p {
-    padding-top: 50px;
+    padding-top: 5vh;
     font-size: 1.3vh;
     overflow: visible !important;
 }
@@ -347,13 +328,13 @@ top: 65px;
     width: 40vh;
     height: auto;
     top: 5vh;
-    left: 32px;
+    left: 3.2vh;
     margin-left: auto;
     margin-right: auto;
     background-color: rgba(23, 23, 23, 1);
     border: 2px solid #dc1414;
     border-radius: .8vh;
-    padding: 30px;
+    padding: 3vh;
     font-family: 'Rubik', sans-serif;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     color: #ededed;
@@ -364,12 +345,12 @@ top: 65px;
 .error-title{
     position: relative;
     width: 100%;
-    height: 11%;
-    margin-bottom: 16px;
+    height: 11vh;
+    margin-bottom: 1.6vh;
     color: #ededed;
     text-align: left;
-    font-size: 18px;
-    line-height: 29px;
+    font-size: 1.8vh;
+    line-height: 2.9vh;
     vertical-align: middle;
     font-family: 'Rubik', sans-serif;
     font-weight: 900;
@@ -377,17 +358,17 @@ top: 65px;
     overflow: visible !important;
 }
 .error-title > .material-symbols-outlined{
-    line-height: 27px;
+    line-height: 2.7vh;
     vertical-align: bottom;
     margin-top: auto;
     margin-bottom: auto;
-    margin-right: 16px;
+    margin-right: 1.6vh;
 }
 
 .error-msg {
     font-family: 'Rubik', sans-serif;
     overflow: visible !important;
-    padding: 8px;
+    padding: .8vh;
 }
 
 #yeet {
@@ -400,9 +381,9 @@ top: 65px;
     height: 19%;
     bottom: 0;
     left: 5%;
-    margin-bottom: 20px;
+    margin-bottom: 2vh;
     background-color: #0dffb6a6;
-    border-radius: 4px;
+    border-radius: .4vh;
     transition: 0.2s;
     overflow: visible !important;
     cursor: pointer;
@@ -414,9 +395,9 @@ top: 65px;
     height: 19%;
     bottom: 0;
     right: 5%;
-    margin-bottom: 20px;
+    margin-bottom: 2vh;
     background-color: #dc1414;
-    border-radius: 4px;
+    border-radius: .4vh;
     transition: 0.2s;
     overflow: visible !important;
     cursor: pointer;
@@ -427,26 +408,16 @@ top: 65px;
     text-transform: uppercase;
     width: auto;
     height: auto;
-    padding: 8px 24px;
-    margin-top: 24px;
+    padding: .8vh 2.4vh;
+    margin-top: 2.4vh;
     background-color: #dc1414;
-    border-radius: 4px;
+    border-radius: .4vh;
     transition: 0.2s;
     overflow: visible !important;
     cursor: pointer;
 }
 
-.character-acceptdel-btn>p {
-    color: #ededed;
-    text-align: center;
-    padding-top: 1vh;
-    font-family: 'Rubik', sans-serif;
-    overflow: visible !important;
-    font-weight: 900;
-    text-transform: uppercase;
-}
-
-.character-canceldel-btn>p {
+.character-acceptdel-btn>p, .character-canceldel-btn>p {
     color: #ededed;
     text-align: center;
     padding-top: 1vh;
@@ -459,15 +430,14 @@ top: 65px;
 .character-register {
     display: none;
     position: fixed;
-    width: 20%;
-    height: 50%;
-    top: 5%;
+    width: 20vw;
+    height: 50vh;
+    top: 5vh;
     margin-left: auto;
     left: 75vh;
     background: rgba(5, 26, 21, 0.73);
-    border-radius: 16px;
-    border-radius: .8vh;
-    padding: 30px;
+    border-radius: 1.6vh;
+    padding: 3vh;
     font-family: 'Rubik', sans-serif;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -520,9 +490,8 @@ top: 65px;
     width: 72%;
     height: 6vh;
     color: #ededed;
-    max-width: 100%;
     font-weight: 900;
-    padding: 4px;
+    padding: .4vh;
     border-radius: .3vh;
     font-family: 'Rubik', sans-serif;
     text-align: center;
@@ -541,8 +510,7 @@ select {
     top: 33.9vh;
     left: .1vh;
     color: #ededed;
-    max-width: 100%;
-    padding: 4px;
+    padding: .4vh;
     border-radius: .3vh;
     font-family: 'Rubik', sans-serif;
     text-align-last: center;
@@ -638,56 +606,51 @@ input[type="date"]::-webkit-clear-button {
     left: 0;
     right: 0;
     top: 50%;
-    width: 150px;
-    height: 150px;
-    transform: translateY(-50%);
-    text-align: center;
-    padding: 1vh;
+    width: 15vh;
+    height: 15vh;
 }
 
-.loading-rondje > p {
-    color: white;
-    margin-top: 1vh;
-    font-family: 'Rubik', sans-serif;
-    text-shadow: 1px 1px 0px #00000085;
+.loading-rondje img {
+    width: 100%;
+    height: auto;
+    animation: spin 2s linear infinite;
 }
 
-.lds-ring {
-    display: inline-block;
-    position: relative;
-    width: 80px;
-    height: 80px;
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
-.lds-ring div {
-    box-sizing: border-box;
-    display: block;
+.character-register-done {
     position: absolute;
-    width: 64px;
-    height: 64px;
-    border: 8px solid #00ffc8;
-    border-radius: 50%;
-    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-    border-color: #00ffc8 transparent transparent transparent;
+    width: 100%;
+    height: 100%;
+    background: rgba(5, 26, 21, 0.73);
+    border-radius: 1.6vh;
+    padding: 3vh;
+    top: 0;
+    left: 0;
+    font-family: 'Rubik', sans-serif;
+    text-align: center;
+    color: #ededed;
+    font-weight: 900;
+    font-size: 2.5vh;
 }
 
-.lds-ring div:nth-child(1) {
-    animation-delay: -0.45s;
+.character-register-done h1 {
+    position: relative;
+    top: 40%;
 }
 
-.lds-ring div:nth-child(2) {
-    animation-delay: -0.3s;
+.character-register-done p {
+    position: relative;
+    top: 45%;
 }
 
-.lds-ring div:nth-child(3) {
-    animation-delay: -0.15s;
-}
-
-@keyframes lds-ring {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+.character-register-done a {
+    position: relative;
+    top: 55%;
+    color: #dc1414;
+    text-decoration: underline;
+    cursor: pointer;
 }
